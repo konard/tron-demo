@@ -140,3 +140,7 @@ vite.config.ts.timestamp-*
 
 # jscpd reports
 reports/
+
+# Bun lockfile (npm is the canonical package manager; bun.lock is generated locally)
+bun.lock
+bun.lockb
