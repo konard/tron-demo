@@ -1,8 +1,38 @@
-# js-ai-driven-development-pipeline-template
+# tron-demo
 
-A comprehensive template for AI-driven JavaScript/TypeScript development with full CI/CD pipeline support.
+A Tron-styled looping flight demo: a triangulated spaceship glides over an
+infinite, polygonal mountain landscape rendered as a cyan wireframe — built
+on top of an AI-driven JavaScript pipeline template.
 
-## Features
+![Tron demo screenshot](https://github.com/konard/tron-demo/blob/issue-1-7664043353b0/docs/screenshots/tron-demo.png?raw=true)
+
+## The Demo
+
+Open `docs/demo/index.html` in any modern browser to watch it. The page is
+self-contained — it pulls [three.js](https://threejs.org) from a CDN via an
+import map and runs entirely on the client.
+
+To preview locally without CORS issues, serve the repo root with any static
+server, for example:
+
+```bash
+python3 -m http.server 8765
+# then open http://127.0.0.1:8765/docs/demo/index.html
+```
+
+How the infinite loop works:
+
+- The terrain is a heightmap whose values are periodic along the Z axis,
+  so two identical chunks tile seamlessly.
+- Two terrain tiles are drawn back-to-back; whichever passes the camera is
+  recycled behind the far one. The seam is invisible because the heightmap
+  matches at the boundary.
+- The triangulated spaceship hovers and sways while the terrain scrolls
+  past, so the flight feels endless without the camera ever moving forward.
+
+## Template Features
+
+The repository keeps the underlying pipeline template intact:
 
 - **Multi-runtime support**: Works with Bun, Node.js, and Deno
 - **Universal testing**: Uses [test-anywhere](https://github.com/link-foundation/test-anywhere) for cross-runtime tests
