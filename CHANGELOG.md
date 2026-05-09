@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.9.0
+
+### Minor Changes
+
+- a7d0974: Add Tron-styled looping flight demo at `docs/demo/index.html`: an
+  infinite, seamlessly tiling polygonal mountain landscape rendered as a
+  cyan wireframe with a triangulated magenta spaceship hovering through
+  it. The terrain heightmap is z-periodic and recycled across two tiles,
+  so the loop has no visible seam.
+
 ## 0.8.6
 
 ### Patch Changes
